@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap');
+$header: #1A1C20;
+$background: #282B31;
+$menus: #222429;
+* {
+    margin: 0;
+    padding: 0;
+}
+img {
+    user-select: none;
+}
+a {
+    text-decoration: none;
+}
+body {
+    background: $background;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+}
+main {
+width: 100%;
+overflow-y: auto;
+overflow-x: hidden;
+min-height: 100%;
+}
+.left-menu {
+    width: 68px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: $menus;
+}
+.chat-block {
+    width: 100%;
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100%;
+    background: $menus;
+    max-width: 240px;
+}
+.main-content {
+    padding-left: 68px;
+    position: relative;
+    width: calc(100% - 308px);
+    min-height: calc(100%-68px);
+    padding-right: 240px;
+
+}
+.content-block {
+    background: $menus;
+    max-width: 960px;
+    width: 100%;
+    position: relative;
+    margin: 129px auto 0 auto;
+    min-height: 100px;
+    box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.15);
+border-radius: 40px;
+}
+.pink-button {
+    position: relative;
+    padding: 5px 0;
+    background: #d426bb;
+    display: block;
+    width: 82px;
+    box-sizing: border-box;
+    text-align: center;
+    border-radius: 10px;
+    font-family: 'Montserrat';
+    transition: 0.25s;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 12px;
+    color: white;
+    user-select: none;
+    &:hover {
+        transform: scale(1.02);
+        -webkit-box-shadow: 0px 0px 10px 0px rgba(212, 38, 187, 0.25);
+        -moz-box-shadow:    0px 0px 10px 0px rgba(212, 38, 187, 0.25);
+        box-shadow:         0px 0px 10px 0px rgba(212, 38, 187, 0.25);
+    }
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    &__logo {
+        position: relative;
+        width: 68px;
+        transition: 0.7s;
+        height: 68px;
+        opacity: 0.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+&:hover {
+    opacity: 0.7;
+    transform: scale(1.2);
+}
+    }
+
+    &__links {
+        margin-left: 36px;
+        >a {
+            font-size: 18px;
+            font-weight: 400;
+            font-family: 'Montserrat';
+            color: white;
+            margin-right: 64px;
+            transition: 0.1s;
+            &:hover {
+                color: #D426BB;
+            }
+        }
+    }
+    &__balance {
+        border-radius: 16px;
+        background: #C4C4C40D;
+        padding-inline: 20px;
+        display: flex;
+        align-items: center;
+        margin-right: 10px;
+        >span {
+font-family: 'Montserrat';
+font-weight: 400;
+font-style: normal;
+font-size: 16px;
+line-height: 16px;
+color: white;
+>span {
+    margin-left: 3px;
+    color: #b70909;
+    display: inline-block;
+    transform: scale(1.4);
+    font-size: 16px;
+
+    line-height: 16px;
+}
+        }
+        height: 36px;
+    }
+    &__deposit {
+display: flex;
+align-items: center;
+justify-content: center;
+width: 36px;
+margin-right: 10px;
+height: 36px;
+border-radius: 12px;
+background: #C4C4C40D;
+        >span {
+            font-family: 'Montserrat';
+font-weight: 400;
+font-style: normal;
+font-size: 32px;
+color: #6AFF45;
+
+        }
+    }
+    &__profile {
+        display: flex;
+        justify-content: center;
+        width: 240px;
+align-items: center;
+        >div:first-child {
+            position: relative;
+            width: 48px;
+            margin-left: 15px;
+            height: 48px;
+             border-radius: 12px;
+             background: grey;
+                background: url("https://static10.tgstat.ru/channels/_0/27/27ac73104f48154b31b7d0b654caf1e9.jpg");
+            background-size: 100%;
+            background-position: center;
+        }
+        >a:nth-child(2) {
+            color: white;
+            font-weight: 400;
+            font-size: 22px;
+            font-family: 'Montserrat';
+            margin-left: 15px;
+        }
+        >a:last-child {
+            position: relative;
+            width: 32px;
+            height: 32px;
+            margin-left: 15px;
+            >img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    &__withdraw {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;margin-right: 16px;
+
+        border-radius: 12px;
+        background: #C4C4C40D;
+                >span {
+                    font-family: 'Montserrat';
+        font-weight: 400;
+        font-style: normal;
+        font-size: 32px;
+line-height: 2px;
+        color: #FF4545;
+        
+                }
+            }
+    &__lvl {
+        border-radius: 16px;
+        background: #C4C4C40D;
+        height: 36px;
+        width: 225px;
+        margin-right: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        >span {
+            font-size: 16px;
+            font-family: 'Montserrat';    
+            color: white;
+            margin-inline: 12px;
+        }
+        >div {
+            border-radius: 8px;
+            height: 12px;
+            background: #C4C4C426;
+           width: 157px;
+           border-radius: 8px;
+           display: flex;
+           position: relative;
+           align-items: center;
+padding-inline: 1px;
+            >div {
+                
+                height: 10px;
+                width: 50%;
+                border-radius: 6px;
+                max-width: calc(100% - 2px);
+                background: #D426BB;
+
+            }
+        }
+    }
+    &__left  {
+        position: relative;
+display: flex;
+justify-content: left;    align-items: center;
+height: 100%;
+
+    }
+    &__right {
+        position: relative;
+display: flex;
+justify-content: right;    align-items: center;
+height: 100%;
+
+    }
+    width: 100%;
+    position: relative;
+    background: $header;
+    max-height: 68px;
+    z-index: 100;
+    height: 100vh;
+}
+.circled-in {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
+    border-radius: 50%;
+    background:rgb(212, 38, 186);
+    >div {
+        width: calc(100% - 4px);
+        border-radius: 50%;
+        background: $header;
+        height: calc(100% - 4px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
