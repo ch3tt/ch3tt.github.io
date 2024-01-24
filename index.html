@@ -36,7 +36,8 @@
     },
     // Finalize the transaction after payer approval
     onApprove: function (data) {
-      return fetch(`myserver.com/api/orders/${data.orderID}/capture`, {
+        console.log('approve');
+      return fetch(`/order/${data.orderID}/capture`, {
         method: "POST",
       })
         .then((response) => response.json())
