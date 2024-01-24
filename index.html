@@ -23,16 +23,13 @@
   .Buttons({
     // Sets up the transaction when a payment button is clicked
     createOrder: function (data) {
-      return fetch("myserver.com/api/orders", {
-        method: "POST",
-        // Use the "body" parameter to optionally pass additional order information
-        // such as product ID or amount
-        body: {
-          paymentSource: data.paymentSource,
-        },
+      return actions.order.create({
+       purchase_units: [{
+        amount: {
+            value: '1'
+        }
+       }]
       })
-        .then((response) => response.json())
-        .then((order) => order.id);
     },
     // Finalize the transaction after payer approval
     onApprove: function (data) {
