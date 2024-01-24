@@ -22,7 +22,7 @@
     paypal
   .Buttons({
     // Sets up the transaction when a payment button is clicked
-    createOrder: function (data) {
+    createOrder: function (data, actions) {
       return actions.order.create({
        purchase_units: [{
         amount: {
@@ -32,7 +32,7 @@
       })
     },
     // Finalize the transaction after payer approval
-    onApprove: function (data) {
+    onApprove: function (data, actions) {
         return actions.order.capture().then(function (detalis){
 console.log(detalis);
         })
