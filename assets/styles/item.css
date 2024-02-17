@@ -5,22 +5,22 @@
   margin-bottom: 24px;
   color: black;
 }
-.another-items > div {
+.another-items > a {
   display: flex;
   flex-direction: column;
   max-width: 136px;
 }
-.another-items > div > a {
+.another-items > a > div {
   display: flex;
   align-items: center;
   height: 48px;
   justify-content: center;
   background: var(--red);
 }
-.another-items > div > a > h1 {
+.another-items > a > div > h1 {
   margin-inline: 4px;
 }
-.another-items > div > p {
+.another-items > a > p {
   margin-bottom: 8px;
 }
 

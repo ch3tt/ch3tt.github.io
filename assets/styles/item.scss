@@ -5,11 +5,11 @@
         margin-bottom: 24px;
         color: black;
     }
->div {
+>a {
     display: flex;
     flex-direction: column;
     max-width: 136px;
-    >a {
+    >div {
         display: flex;
         align-items: center;
         height: 48px;

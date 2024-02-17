@@ -70,29 +70,30 @@
 }
 .catalog-screen > div {
   display: flex;
-  row-gap: 40px;
+  row-gap: 8px;
+  flex-direction: column;
   -moz-column-gap: 8px;
        column-gap: 8px;
   flex-wrap: wrap;
   display: flex;
   margin-bottom: 32px;
 }
-.catalog-screen > div > div {
+.catalog-screen > div > a {
   display: flex;
   flex-direction: column;
   max-width: 136px;
 }
-.catalog-screen > div > div > a {
+.catalog-screen > div > a > div {
   display: flex;
   align-items: center;
   height: 48px;
   justify-content: center;
   background: var(--red);
 }
-.catalog-screen > div > div > a > h1 {
+.catalog-screen > div > a > div > h1 {
   margin-inline: 4px;
 }
-.catalog-screen > div > div > p {
+.catalog-screen > div > a > p {
   margin-bottom: 8px;
 }
 
