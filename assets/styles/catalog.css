@@ -1,0 +1,107 @@
+.catalog-first-screen {
+  display: flex;
+  flex-direction: column;
+}
+.catalog-first-screen > img {
+  max-width: 100%;
+  margin-bottom: 16px;
+}
+.catalog-first-screen > h1 {
+  color: black;
+  margin-inline: 16px;
+}
+.catalog-first-screen > section {
+  margin: 8px 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 24px 16px;
+}
+.catalog-first-screen > section > div {
+  display: flex;
+  gap: 2px;
+  flex-direction: column;
+}
+.catalog-first-screen > section > div > a {
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: var(--red);
+}
+.catalog-first-screen > section > div > p {
+  font-family: "Roboto";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #9D9D9D;
+}
+
+.catalog-screen {
+  padding: 32px 16px 40px 16px;
+}
+.catalog-screen > h1 {
+  color: black;
+  margin-bottom: 24px;
+}
+.catalog-screen > nav {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 24px;
+}
+.catalog-screen > nav > p {
+  font-family: "Intro Demo";
+  color: black;
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 26px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.catalog-screen > nav > p.active-page {
+  text-decoration: none;
+  color: var(--red);
+}
+.catalog-screen > div {
+  display: flex;
+  row-gap: 40px;
+  -moz-column-gap: 8px;
+       column-gap: 8px;
+  flex-wrap: wrap;
+  display: flex;
+  margin-bottom: 32px;
+}
+.catalog-screen > div > div {
+  display: flex;
+  flex-direction: column;
+  max-width: 136px;
+}
+.catalog-screen > div > div > a {
+  display: flex;
+  align-items: center;
+  height: 48px;
+  justify-content: center;
+  background: var(--red);
+}
+.catalog-screen > div > div > a > h1 {
+  margin-inline: 4px;
+}
+.catalog-screen > div > div > p {
+  margin-bottom: 8px;
+}
+
+@media (min-width: 480px) {
+  .catalog-screen > div > div {
+    max-width: 203px;
+  }
+  .catalog-screen > div {
+    -moz-column-gap: 24px;
+         column-gap: 24px;
+  }
+}/*# sourceMappingURL=catalog.css.map */
