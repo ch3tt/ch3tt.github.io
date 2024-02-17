@@ -81,7 +81,8 @@
 .catalog-screen > div > a {
   display: flex;
   flex-direction: column;
-  max-width: 136px;
+  max-width: 400px;
+  width: 100%;
 }
 .catalog-screen > div > a > div {
   display: flex;
