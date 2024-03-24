@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.6ca0c408.css",
-    "main.js": "/static/js/main.25555e00.js",
+    "main.css": "/static/css/main.2dcd2972.css",
+    "main.js": "/static/js/main.0ecfcfee.js",
     "static/js/453.7aefe1de.chunk.js": "/static/js/453.7aefe1de.chunk.js",
     "static/media/Gotham-Book.ttf": "/static/media/Gotham-Book.6f0fc4e65b2b74de61c5.ttf",
     "static/media/Gotham-Medium.ttf": "/static/media/Gotham-Medium.5a5061d520ff31fad9e9.ttf",
@@ -12,12 +12,12 @@
     "static/media/search.svg": "/static/media/search.73bdf1aaa0f7409dedee.svg",
     "static/media/getFetch.cjs": "/static/media/getFetch.40f37ddea2378391108f.cjs",
     "static/media/check.svg": "/static/media/check.e0758eb7f131c171d32b.svg",
-    "main.6ca0c408.css.map": "/static/css/main.6ca0c408.css.map",
-    "main.25555e00.js.map": "/static/js/main.25555e00.js.map",
+    "main.2dcd2972.css.map": "/static/css/main.2dcd2972.css.map",
+    "main.0ecfcfee.js.map": "/static/js/main.0ecfcfee.js.map",
     "453.7aefe1de.chunk.js.map": "/static/js/453.7aefe1de.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6ca0c408.css",
-    "static/js/main.25555e00.js"
+    "static/css/main.2dcd2972.css",
+    "static/js/main.0ecfcfee.js"
   ]
 }
