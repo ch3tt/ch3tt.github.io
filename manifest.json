@@ -1,27 +1,25 @@
 {
-  "theme_color": "#f83758",
-  "background_color": "#ffffff",
+  "short_name": "React App",
+  "name": "Create React App Sample",
   "icons": [
     {
-      "purpose": "maskable",
-      "sizes": "512x512",
-      "src": "icon512_maskable.png",
-      "type": "image/png"
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
     },
     {
-      "purpose": "any",
-      "sizes": "512x512",
-      "src": "icon512_rounded.png",
-      "type": "image/png"
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512"
     }
   ],
-  "orientation": "portrait",
+  "start_url": ".",
   "display": "standalone",
-  "dir": "left",
-  "lang": "ru-RU",
-  "name": "Hey Life",
-  "short_name": "Hey Life",
-  "start_url": "/",
-  "scope": "/",
-  "description": "Description"
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
 }
