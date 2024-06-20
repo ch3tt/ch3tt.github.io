@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <title>HEY LIFE</title>
+    <link rel="manifest" href="/manifest.json" />
+    <script type="module" crossorigin src="/assets/index-C8Ayqn_J.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-Bzr7Wuwf.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker
+            .register("./serviceWorker.js")
+            .then((reg) => {
+              console.log("Worker Registered");
+            })
+            .catch((err) => {
+              console.log("err in sw", err);
+            });
+        });
+      }
+    </script>
+  </body>
+</html>
