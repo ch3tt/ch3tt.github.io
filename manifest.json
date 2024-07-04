@@ -19,8 +19,8 @@
   "display": "standalone",
   "dir": "left",
   "lang": "ru-RU",
-  "name": "Hey Life Admin",
-  "short_name": "Hey Life Admin",
+  "name": "Hey Life",
+  "short_name": "Hey Life",
   "start_url": "/",
   "scope": "/",
   "description": "Description"
