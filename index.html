@@ -1,32 +1,14 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, maximum-scale=1"
-    />
-    <title>HEY LIFE</title>
-    <link rel="manifest" href="/manifest.json" />
-    <script type="module" crossorigin src="/assets/index-CHZ5wEDz.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-DxkivRvh.css">
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CatTap</title>
+    <script type="module" crossorigin src="/assets/index-9qk3qZtj.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-BYnYQH4e.css">
   </head>
   <body>
     <div id="root"></div>
-    <script>
-      if ("serviceWorker" in navigator) {
-        window.addEventListener("load", () => {
-          navigator.serviceWorker
-            .register("./serviceWorker.js")
-            .then((reg) => {
-              console.log("Worker Registered");
-            })
-            .catch((err) => {
-              console.log("err in sw", err);
-            });
-        });
-      }
-    </script>
-    
   </body>
 </html>
