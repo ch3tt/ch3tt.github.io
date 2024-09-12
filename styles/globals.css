@@ -93,7 +93,7 @@ p {
   align-items: center;
   max-width: 100%;
   background: var(--black);
-  min-height: 100dvh;
+  min-height: 100vh;
   padding-inline: 16px;
   position: relative;
 }
