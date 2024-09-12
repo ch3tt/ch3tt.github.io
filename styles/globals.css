@@ -1,0 +1,339 @@
+@font-face {
+  font-family: "Inter";
+  src: url("./../fonts/Inter/Inter-SemiBold.woff2");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("./../fonts/Inter/Inter-Medium.woff2");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("./../fonts/Inter/Inter-Regular.woff2");
+  font-weight: 400;
+}
+* {
+  box-sizing: border-box;
+}
+
+a,
+p,
+span,
+b,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Inter";
+}
+
+html {
+  --black: #000;
+  background: rgba(255, 255, 255, 0.1607843137);
+  --primary: #f3c025;
+  --white: #fff;
+  --thin: #17181a;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+h1 {
+  color: var(--white);
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 600;
+}
+
+h2 {
+  color: var(--white);
+  font-size: 24px;
+  line-height: 40px;
+  font-weight: 600;
+}
+
+span {
+  font-size: 18px;
+  line-height: 22px;
+  color: white;
+  opacity: 0.6;
+  font-weight: 500;
+}
+
+h5 {
+  font-size: 16px;
+  line-height: 22px;
+  color: var(--white);
+  font-weight: 600;
+}
+
+p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: center;
+  color: var(--white);
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100%;
+  background: var(--black);
+  min-height: 100dvh;
+  padding-inline: 16px;
+  position: relative;
+}
+.main.main-home {
+  overflow: hidden;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+.main.main-home .slider {
+  margin-bottom: 30px;
+  align-self: flex-start;
+  display: flex;
+  gap: 16px;
+}
+.main.main-home .slider__item {
+  width: calc(100vw - 52px);
+  background: var(--thin);
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  border-radius: 12px;
+  padding: 20px;
+}
+.main.main-home .slider__item > p {
+  margin-bottom: 16px;
+}
+.main.main-home .slider__item > h6 {
+  font-size: 18px;
+  margin-bottom: 6px;
+  line-height: 22px;
+  color: var(--white);
+}
+.main.main-home .your_score {
+  width: 100%;
+  height: 56px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--primary);
+  display: flex;
+  margin-bottom: 12px;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.main.main-home .tasks {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+  gap: 28px;
+}
+.main.main-home .tasks:not(.main.main-home .tasks:last-child) {
+  margin-bottom: 32px;
+}
+.main.main-home .tasks > p {
+  text-align: left;
+}
+.main.main-home .tasks > div {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.main.main-home .tasks > div > div {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+.main.main-home .tasks > div > div > div {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+.main.main-home .tasks > div > div > div > div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.main.main-home .tasks > div > div > div > div > span {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+}
+.main.main-home .link-button {
+  display: flex;
+  opacity: 0.5;
+  align-items: center;
+  background: transparent;
+}
+.main.main-home .link-button > p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+}
+.main.main-home .round-white-button {
+  padding: 8px 12px;
+  border-radius: 30px;
+  background-color: var(--white);
+  color: var(--black);
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 18px;
+}
+.main.main-home .round-gray-button {
+  padding: 8.5px 16px;
+  border-radius: 30px;
+  background-color: rgba(192, 197, 216, 0.1607843137);
+  color: var(--white);
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 18px;
+}
+.main.main-home .round-primary-button {
+  padding: 8.5px 16px;
+  border-radius: 30px;
+  background-color: var(--primary);
+  color: var(--black);
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 18px;
+}
+.main.main-home .stars_block {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 16px;
+  display: flex;
+  background: var(--thin);
+  border-radius: 12px;
+  align-items: center;
+  flex-direction: column;
+  padding: 40px 20px 20px 20px;
+}
+.main.main-home .stars_block .shine {
+  background: var(--primary);
+  filter: blur(30px);
+  border-radius: 50%;
+  opacity: 0.7;
+  height: 270px;
+  top: -135px;
+  position: absolute;
+  margin-inline: 15px;
+  width: calc(100% - 30px);
+}
+.main.main-home .stars_block > *:not(.shine) {
+  z-index: 2;
+}
+.main.main-steps {
+  padding-top: 20px;
+  padding-bottom: 150px;
+}
+.main.main-steps .steps-block {
+  width: 100%;
+  display: flex;
+  gap: 12px;
+}
+.main.main-steps .steps-block > div {
+  background: rgba(255, 255, 255, 0.1607843137);
+  border-radius: 50px;
+  height: 6px;
+  width: 100%;
+}
+.main.main-steps .steps-block > div.filled {
+  background: var(--primary);
+}
+.main.main-steps > h1 {
+  margin-top: 32px;
+  margin-bottom: 22px;
+}
+.main.main-checking {
+  padding-top: 30px;
+}
+.main.main-checking .main-check-steps {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.main.main-checking .main-check-steps > div {
+  width: 100%;
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+}
+.main.main-checking .main-check-steps > div > div {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.main.main-checking .main-check-steps > div > nav {
+  display: flex;
+  height: 10px;
+  border-radius: 30px;
+  overflow: hidden;
+  background: var(--thin);
+}
+.main.main-checking .main-check-steps > div > nav > div {
+  height: 10px;
+  background: var(--primary);
+}
+.main.main-checking h2 {
+  margin-bottom: 100px;
+}
+.main.dialog {
+  padding-inline: 36px;
+}
+.main.main-welcome {
+  justify-content: center;
+}
+.main.main-welcome > img {
+  width: 160px;
+  margin-top: -52px;
+  height: 160px;
+}
+
+button {
+  outline: none;
+  border: 0;
+}
+
+.white-button-full {
+  position: relative;
+  font-weight: 500;
+  text-align: center;
+  padding: 14px;
+  color: var(--black);
+  background: white;
+  font-size: 18px;
+  width: 100%;
+  border-radius: 12px;
+}
+
+.primary-button-full {
+  position: relative;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 14px;
+  color: var(--black);
+  background: var(--primary);
+  width: 100%;
+  border-radius: 12px;
+}/*# sourceMappingURL=globals.css.map */
