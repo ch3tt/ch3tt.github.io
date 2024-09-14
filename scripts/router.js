@@ -89,7 +89,9 @@ if (page == '/leaders'){
 
 
         document.querySelectorAll('.close-button').forEach((el)=>{
+        console.log(el);
           el.addEventListener('click',(e)=>{
+         console.log(e.target);
             e.target.parentElement.parentElement.classList.remove('open');
           })
         
@@ -134,6 +136,18 @@ spinned = true;
         e.stopPropagation();
         e.preventDefault();
       })
+    }
+    );
+
+
+      document.querySelectorAll('.close-button').forEach((el)=>{
+      console.log(el);
+        el.addEventListener('click',(e)=>{
+       console.log(e.target);
+          e.target.parentElement.parentElement.classList.remove('open');
+        })
+      
+    
     })
     let timer = document.getElementById('nextSpinTimer');
     setInterval(()=>{
