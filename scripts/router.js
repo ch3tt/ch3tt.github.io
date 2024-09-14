@@ -42,41 +42,30 @@ if (page == '/clan'){
 container.setAttribute('data-page',page);
     }
 }
-if (page == '/home') {
+if (page == '/check') {
       
-      const slider = document.querySelector('#pagintation-slider')
-     const dots = document.querySelector('.slider__dots');
-    
-     let page = 0;
-      function switchPage (pageIndex) {
-        page = pageIndex;
-      if (page == 0)   slider.style.transform = `translateX(0px)`;else
-      slider.style.transform = `translateX(calc(-100vw + 52px))`;
-        dots.querySelector('.sel').classList.remove('sel');
-        dots.querySelectorAll('div')[pageIndex].classList.add('sel');
-      }
-      dots.querySelectorAll('div')[0].addEventListener('click',()=>{
-        switchPage(0);
-     })
-     dots.querySelectorAll('div')[1].addEventListener('click',()=>{
-        switchPage(1);
-     })
-      let startX; 
-      slider.addEventListener('touchstart',(e)=>{
-  e.preventDefault();
-  startX = e.touches[0].clientX;
+const s = document.querySelectorAll('.main-check-steps>div');
+setTimeout(()=>{
+  s[0].classList.add('progress');
+
+},10)
+setTimeout(()=>{
+  s[0].classList.add('full');
+  s[1].classList.add('progress');
+},4000)
+setTimeout(()=>{
+  s[1].classList.add('full');
+  s[2].classList.add('progress');
+},8000)
+setTimeout(()=>{
+  s[2].classList.add('full');
+  s[3].classList.add('progress');
+},12000);
+setTimeout(()=>{
+
+  s[3].classList.add('full');
+},16000)
   
-  });
-  
-  slider.addEventListener('touchend',(e)=>{
-    e.preventDefault();
-  if (page == 0 && startX -  e.changedTouches[0].clientX > 30){
-  switchPage(1);
-  }else if (page == 1 &&  e.changedTouches[0].clientX - startX > 30){
-    switchPage(0)
-  }
-  
-  });
   
      
    
@@ -95,6 +84,16 @@ if (page == '/leaders'){
           e.stopPropagation();
           e.preventDefault();
         })
+      }
+      );
+
+
+        document.querySelectorAll('.close-button').forEach((el)=>{
+          el.addEventListener('click',(e)=>{
+            e.target.parentElement.parentElement.classList.remove('open');
+          })
+        
+      
       })
       const container = document.querySelector('.tabs__container');
       document.querySelectorAll('.tabs__item')[0].addEventListener('click',()=>{

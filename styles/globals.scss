@@ -35,7 +35,7 @@ h6 {
 }
 html {
   --black: #000;
-  
+
   --primary: #f3c025;
   --white: #fff;
   --thin: #17181a;
@@ -127,40 +127,41 @@ p {
   background: var(--thin);
   position: relative;
   &__container {
-position: relative;
-display: flex;
-&[data-page="1"]{
-  &:after {
-    left: 50%;
-  }
-  >.tabs__item:nth-child(2) {
-    color: var(--black);
-  }
-}
-&[data-page="0"]{
-  &:after {
-    left: 0%;
-  }
-  >.tabs__item:nth-child(1) {
-    color: var(--black);
-  }
-}
-&:after {
-  width: 50%;
-  left: 0;
-  content: '';
-  transition: .3s;
-  position: absolute;
-  height: 40px;
-  background: var(--primary);
-  border-radius: 8px;
-}
+    position: relative;
+    display: flex;
+    &[data-page="1"] {
+      &:after {
+        left: 50%;
+      }
+      > .tabs__item:nth-child(2) {
+        color: var(--black);
+      }
+    }
+    &[data-page="0"] {
+      &:after {
+        left: 0%;
+      }
+      > .tabs__item:nth-child(1) {
+        color: var(--black);
+      }
+    }
+    &:after {
+      width: 50%;
+      left: 0;
+      content: "";
+      transition: 0.3s;
+      position: absolute;
+      height: 40px;
+      background: var(--primary);
+      border-radius: 8px;
+    }
   }
   &__item {
     border-radius: 8px;
     height: 40px;
     background: transparent;
-    width: 50%;z-index: 2;
+    width: 50%;
+    z-index: 2;
     color: var(--white);
     font-size: 16px;
     line-height: 22px;
@@ -203,7 +204,7 @@ display: flex;
     width: 100%;
     padding-inline: 36px;
     padding-bottom: 26px;
-   
+
     align-items: center;
     .close-button {
       position: absolute;
@@ -227,42 +228,47 @@ display: flex;
   background: var(--thin);
   border-radius: 12px;
   justify-content: space-between;
-  >div:first-child {
+  > div:first-child {
     display: flex;
     gap: 14px;
-    
+
     align-items: center;
-    >img {
+    > img {
       width: 38px;
       height: 38px;
       border-radius: 50%;
-      
     }
-    >div {
+    > div {
       display: flex;
-      >span {
-        font-size: 12px;  
+      > span {
+        font-size: 12px;
         font-weight: 500;
         line-height: 14px;
       }
-      flex-direction: column;gap: 6px;
+      flex-direction: column;
+      gap: 6px;
     }
   }
-  >div:last-child {
+  > div:last-child {
     display: flex;
     flex-direction: column;
     gap: 6px;
     text-align: right;
     align-items: flex-end;
-    >div {
-     align-items: center;
-      display: flex;gap: 6px;
-      >p {
-        
-        font-size: 12px;  line-height: 14px;
+    > div {
+      align-items: center;
+      display: flex;
+      gap: 6px;
+      > p {
+        font-size: 12px;
+        line-height: 14px;
       }
     }
   }
+}
+.close-button > svg {
+  user-select: none;
+  pointer-events: none;
 }
 .main {
   max-height: 100vh;
@@ -276,7 +282,7 @@ display: flex;
   padding-inline: 16px;
   position: relative;
   overflow-x: hidden;
-overflow-y: auto;
+  overflow-y: auto;
   &__wrapper {
     display: flex;
     width: 100%;
@@ -289,20 +295,19 @@ overflow-y: auto;
         display: none;
       }
       &.in div {
-display: flex;
-gap: 8px;
-align-items: center;
->button:last-child {
- min-width: 50px;
-  height: 50px;
-  background: transparent;
-  border-radius: 12px;
-  background: var(--thin);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-}
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        > button:last-child {
+          min-width: 50px;
+          height: 50px;
+          background: transparent;
+          border-radius: 12px;
+          background: var(--thin);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
       }
       &.in > button {
         display: none;
@@ -310,48 +315,50 @@ align-items: center;
     }
     padding-top: 20px;
     .stats {
-      display: flex;gap: 40px;
+      display: flex;
+      gap: 40px;
       align-self: center;
       margin-bottom: 30px;
-      >div {
+      > div {
         display: flex;
         flex-direction: column;
         align-items: center;
         a {
           color: var(--primary);
         }
-        p:nth-child(2){
-         font-size: 12px;line-height: 14px; 
+        p:nth-child(2) {
+          font-size: 12px;
+          line-height: 14px;
         }
       }
     }
   }
-&.main-clans-create {
-  padding-top: 20px;
-  .search {
-    height: 44px;
-    border-radius: 30px;
-    background: var(--thin);
-    display: flex;
-    gap: 8px;
-    align-items: center;
-    width: 100%;
-    padding-inline: 12px;
-
-    >input {
-      color: var(--white);
-    &::placeholder {
-      opacity: .5;
-    }
-      width: 100%;
-      outline: none;
-      font-size: 16px;
-      background: transparent;
-      border: 0;
+  &.main-clans-create {
+    padding-top: 20px;
+    .search {
       height: 44px;
+      border-radius: 30px;
+      background: var(--thin);
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      width: 100%;
+      padding-inline: 12px;
+
+      > input {
+        color: var(--white);
+        &::placeholder {
+          opacity: 0.5;
+        }
+        width: 100%;
+        outline: none;
+        font-size: 16px;
+        background: transparent;
+        border: 0;
+        height: 44px;
+      }
     }
   }
-}
   &.main-clans-join {
     display: flex;
     align-items: center;
@@ -364,50 +371,49 @@ align-items: center;
     z-index: 20;
     gap: 24px;
     width: 100%;
-    >div {
+    > div {
       display: flex;
       width: 100%;
       justify-content: space-between;
       align-items: center;
-      >div:first-child {
+      > div:first-child {
         gap: 14px;
         display: flex;
         align-items: center;
-        >div:nth-child(2) {
+        > div:nth-child(2) {
           display: flex;
-flex-direction: column;
-gap: 6px;
->div:nth-child(2){
-display: flex;
-gap: 6px;
-align-items: center;
->p {
-font-size: 12px;
-line-height: 14px;
-}
-}
-          >div:nth-child(1){
+          flex-direction: column;
+          gap: 6px;
+          > div:nth-child(2) {
+            display: flex;
+            gap: 6px;
+            align-items: center;
+            > p {
+              font-size: 12px;
+              line-height: 14px;
+            }
+          }
+          > div:nth-child(1) {
             display: flex;
             align-items: center;
             gap: 4px;
-            >p {
+            > p {
               font-size: 16px;
               line-height: 20px;
             }
-          >span {
-            font-size: 11px;
-            line-height: 14px;
-            padding: 3px 4px;
-            background: var(--primary);
-            border-radius: 6px;
-            color: var(--black);
-            opacity: 1;
-            font-weight: 500;
-            
+            > span {
+              font-size: 11px;
+              line-height: 14px;
+              padding: 3px 4px;
+              background: var(--primary);
+              border-radius: 6px;
+              color: var(--black);
+              opacity: 1;
+              font-weight: 500;
+            }
           }
         }
-        }
-        >img {
+        > img {
           width: 38px;
           height: 38px;
           border-radius: 50%;
@@ -422,7 +428,7 @@ line-height: 14px;
       position: relative;
       flex-direction: column;
       align-items: center;
-   
+
       .podium__buttons {
         z-index: 150;
         margin-top: -50px;
@@ -435,12 +441,11 @@ line-height: 14px;
       .podium__top {
         position: relative;
         display: flex;
-     
+
         z-index: 3;
         .podium__item {
-        
           display: flex;
-          >svg:first-child {
+          > svg:first-child {
             width: 40px;
             height: 40px;
             z-index: 2;
@@ -449,17 +454,19 @@ line-height: 14px;
           align-items: center;
           flex-direction: column;
           justify-content: flex-end;
-          >img {
+          > img {
             width: 56px;
             height: 56px;
             border-radius: 50%;
             margin-bottom: 12px;
           }
-          >p {
-            font-size: 14px; line-height: 21px; text-align: center;
+          > p {
+            font-size: 14px;
+            line-height: 21px;
+            text-align: center;
             margin-bottom: 6px;
           }
-          >div {
+          > div {
             display: flex;
             gap: 6px;
             align-items: center;
@@ -472,8 +479,12 @@ line-height: 14px;
         z-index: 4;
         top: 268px;
         width: 100%;
-        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 22.74%);
-      
+        background: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0) 0%,
+          #000000 22.74%
+        );
+
         height: 550px;
       }
       .bg {
@@ -481,29 +492,28 @@ line-height: 14px;
         position: absolute;
         width: 600px;
         height: 600px;
-        opacity: .1;
-        left:calc(50% - 300px);
-border-radius: 50%;
-border: 1.5px solid #FFFFFF;
-display: flex;
-align-items: center;
-justify-content: center;
-.in {
-width: 420px;
-height: 420px;
-border-radius: 50%;
-border: 1.5px solid #FFFFFF;
-display: flex;
-justify-content:center;
-align-items: center;
-.circle {
-  width: 240px;
-  border-radius: 50%;
-background:  #FFFFFF;
-  height: 240px;
-}
-}
-
+        opacity: 0.1;
+        left: calc(50% - 300px);
+        border-radius: 50%;
+        border: 1.5px solid #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .in {
+          width: 420px;
+          height: 420px;
+          border-radius: 50%;
+          border: 1.5px solid #ffffff;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .circle {
+            width: 240px;
+            border-radius: 50%;
+            background: #ffffff;
+            height: 240px;
+          }
+        }
       }
     }
   }
@@ -517,31 +527,30 @@ background:  #FFFFFF;
         display: flex;
         width: 100%;
         justify-content: space-between;
-        >div:first-child {
+        > div:first-child {
           display: flex;
           gap: 6px;
           align-items: center;
         }
-        
-     
       }
       .friends-block__body {
         display: flex;
         flex-direction: column;
         gap: 20px;
-        >div {
+        > div {
           display: flex;
           justify-content: space-between;
-          >div:first-child {
+          > div:first-child {
             gap: 14px;
-            display: flex;align-items: center;
-            >img {
+            display: flex;
+            align-items: center;
+            > img {
               border-radius: 50%;
               width: 38px;
               height: 38px;
             }
           }
-          >div:last-child {
+          > div:last-child {
             display: flex;
             gap: 6px;
             align-items: center;
@@ -558,34 +567,34 @@ background:  #FFFFFF;
       padding: 20px;
       border-radius: 12px;
       background: var(--thin);
-      >section {
+      > section {
         display: flex;
         gap: 8px;
         width: 100%;
 
-        >div {
+        > div {
           display: flex;
           align-items: center;
           justify-content: center;
-background: #C0C5D829;
-border-radius: 12px;
-min-width: 50px;
-width: 50px;
+          background: #c0c5d829;
+          border-radius: 12px;
+          min-width: 50px;
+          width: 50px;
           height: 50px;
         }
       }
->div {
-  >div {
-    display: flex;
-    flex-direction: column;
-gap: 6px;
->p {
-  text-align: left;
-}
-  }
-  display: flex;
-  gap: 14px;
-}
+      > div {
+        > div {
+          display: flex;
+          flex-direction: column;
+          gap: 6px;
+          > p {
+            text-align: left;
+          }
+        }
+        display: flex;
+        gap: 14px;
+      }
     }
   }
   &.main-earn {
@@ -596,71 +605,79 @@ gap: 6px;
       background: var(--thin);
       border-radius: 12px;
       padding: 0 20px 20px 20px;
-    flex-direction: column;
-    gap: 20px;
-    position: relative;
-    .thumb {
-     position: absolute;
-     left: 20px;
-     width: calc(100% - 40px);
-     display: flex;
-     flex-direction: column;
-     .g1 {
-      height: 102px;
-      width: 100%;
-      z-index: 20;
+      flex-direction: column;
+      gap: 20px;
       position: relative;
-      background: linear-gradient(180deg, #17181A 32.35%, rgba(23, 24, 26, 0.5) 100%);
-     }
-.current {
-  width: 100%;
-  height: 24px;
-  border-radius: 6px;
-  background: #26282B;
-}
-     .g2 {
-      z-index: 20;
-      position: relative;
-      background: linear-gradient(0deg, #17181A 32.35%, rgba(23, 24, 26, 0.5) 100%);
-height: 76px;
-width: 100%;
-     }
-     max-width: calc(100% - 40px);
-    }
-    .spin-block__wheel {
-
-max-height: 159px;
-overflow: hidden;
-margin-top: 20px;
-z-index: 10;
->div.spin-wheel-wrapper{
-  transition: 1.8s ease-in-out;
-  display: flex;
-flex-direction: column;
-z-index: 10;
-align-items: center;
-  gap: 3px;
-  min-height: fit-content;
-  >div {
-display: flex;
-align-items: center;
-justify-content: center;
-height: 24px;gap: 8px;
->p {
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 20px;
-}
-}
-}
-    }
+      .thumb {
+        position: absolute;
+        left: 20px;
+        width: calc(100% - 40px);
+        display: flex;
+        flex-direction: column;
+        .g1 {
+          height: 102px;
+          width: 100%;
+          z-index: 20;
+          position: relative;
+          background: linear-gradient(
+            180deg,
+            #17181a 32.35%,
+            rgba(23, 24, 26, 0.5) 100%
+          );
+        }
+        .current {
+          width: 100%;
+          height: 24px;
+          border-radius: 6px;
+          background: #26282b;
+        }
+        .g2 {
+          z-index: 20;
+          position: relative;
+          background: linear-gradient(
+            0deg,
+            #17181a 32.35%,
+            rgba(23, 24, 26, 0.5) 100%
+          );
+          height: 76px;
+          width: 100%;
+        }
+        max-width: calc(100% - 40px);
+      }
+      .spin-block__wheel {
+        max-height: 159px;
+        overflow: hidden;
+        margin-top: 20px;
+        z-index: 10;
+        > div.spin-wheel-wrapper {
+          transition: 1.8s ease-in-out;
+          display: flex;
+          flex-direction: column;
+          z-index: 10;
+          align-items: center;
+          gap: 3px;
+          min-height: fit-content;
+          > div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 24px;
+            gap: 8px;
+            > p {
+              font-size: 16px;
+              font-weight: 500;
+              line-height: 20px;
+            }
+          }
+        }
+      }
     }
   }
   &.main-home {
     overflow: hidden;
     .slider {
-      transition: .3s;
-    margin-bottom: 12px;
+      transition: 0.3s;
+      margin-bottom: 12px;
       align-self: flex-start;
       display: flex;
       gap: 16px;
@@ -671,11 +688,11 @@ height: 24px;gap: 8px;
         width: 100%;
         display: flex;
         justify-content: center;
-        >div {
+        > div {
           width: 9px;
           height: 9px;
           border-radius: 50%;
-          opacity: .3;
+          opacity: 0.3;
           background: white;
           &.sel {
             opacity: 1;
@@ -702,7 +719,7 @@ height: 24px;gap: 8px;
       padding: 20px;
     }
     padding-top: 20px;
-   
+
     .your_score {
       width: 100%;
       height: 56px;
@@ -715,7 +732,7 @@ height: 24px;gap: 8px;
       justify-content: center;
       align-items: center;
     }
-   
+
     .link-button {
       display: flex;
       opacity: 0.5;
@@ -737,7 +754,7 @@ height: 24px;gap: 8px;
       font-size: 15px;
       line-height: 18px;
     }
-    
+
     .stars_block {
       width: 100%;
       position: relative;
@@ -797,6 +814,12 @@ height: 24px;gap: 8px;
         width: 100%;
         display: flex;
         gap: 8px;
+        &.progress > nav > div {
+          width: 100%;
+        }
+        &.full > div > svg > path {
+          fill: var(--primary);
+        }
         flex-direction: column;
         > div {
           display: flex;
@@ -811,6 +834,9 @@ height: 24px;gap: 8px;
           background: var(--thin);
           > div {
             height: 10px;
+            transition: 4s linear;
+            width: 0;
+border-radius: 30px;
             background: var(--primary);
           }
         }
@@ -821,16 +847,15 @@ height: 24px;gap: 8px;
       margin-bottom: 100px;
     }
   }
-  &:not(&.dialog){
+  &:not(&.dialog) {
     max-height: calc(100vh - 101px);
     min-height: calc(100vh - 101px);
-   
+
     overflow-x: hidden;
     overflow-y: auto;
   }
   &.dialog {
     padding-inline: 36px;
-  
   }
   &.main-welcome {
     justify-content: center;
@@ -854,37 +879,34 @@ button {
   position: fixed;
   bottom: 0;
 
-  >button {
+  > button {
     background: transparent;
-    
+
     align-items: center;
     display: flex;
     flex-direction: column;
     gap: 8px;
-    &.sel>div {
+    &.sel > div {
       background: var(--primary);
-      >svg>path, >svg>g>path {
+      > svg > path,
+      > svg > g > path {
         fill: var(--black);
       }
     }
-    >div {
-     
-       
-      
+    > div {
       border-radius: 30px;
-     height: 32px;
-     width: 64px;
-     align-items: center;
-     justify-content: center;
-     display: flex;
-      >svg {
-      
-        >path {
+      height: 32px;
+      width: 64px;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      > svg {
+        > path {
           fill: var(--white);
         }
       }
     }
-    >p {
+    > p {
       font-size: 12px;
       line-height: 15px;
     }
